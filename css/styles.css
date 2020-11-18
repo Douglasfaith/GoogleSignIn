@@ -1,0 +1,206 @@
+:root {
+  --main-color: #202124;
+  --light-color: #5f6368;
+  --light-blue: #1a73e8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  color: var(--main-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 85%;
+  max-width: 450px;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.main {
+  border: 1px solid #d1cece;
+  border-radius: 10px;
+  padding: 40px 40px 80px  40px;
+  margin: auto;
+}
+
+.google-logo {
+  text-align: center;
+}
+
+.main img {
+  width: 75px;
+  height: 24px;
+}
+
+.sign-in {
+  padding-bottom: 0;
+  padding-top: 16px;
+  font-size: 24px;
+  line-height: 1.3333;
+  text-align: center;
+  margin-top: 0;
+  font-weight: 400;
+}
+
+.google-account {
+  font-size: 16px;
+  letter-spacing: 0.1px;
+  line-height: 1.5;
+  padding-bottom: 0;
+  padding-top: 8px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.main input {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  color: var(--main-color);
+  /* height: 28px; */
+  margin: 1px 1px 0 1px;
+  padding: 13px 15px;
+  z-index: 1;
+  outline: none;
+  width: 100%;
+}
+
+.forgot-email {
+  color: var(--light-blue);
+  font-size: 13px;
+  font-weight: 500;
+  margin-top: 8px;
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+
+.not-your-computer {
+  color: var(--light-color);
+  font-size: 14px;
+}
+
+.learn-more {
+  color: var(--light-blue);
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+
+.create-acct-next {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.create-account {
+  color: var(--light-blue);
+  font-weight: 500;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.next {
+  background: var(--light-blue);
+  border: none;
+  border-radius: 3px;
+  padding: 10px 30px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.next:hover {
+  background: #1355ac;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--light-color);
+  font-size: 11px;
+  margin-top: 25px;
+}
+
+.footer select {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.footer .footer-right {
+  display: flex;
+}
+
+.footer .footer-right p {
+  margin-left: 25px;
+  cursor: pointer;
+}
+
+/* This media queries part may confuse you for now until you look into it */
+
+/* Media Queries */
+@media screen and (max-width: 600px) {
+  .container {
+    margin-top: 40px;
+  }
+
+  .main {
+    border: none;
+    padding: 0;
+    height: 85vh;
+  }
+
+  .footer {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .footer {
+    font-size: 11px;
+  }
+  
+  .footer select {
+    flex: 1
+  }
+  
+  .footer .footer-right {
+    flex: 1;
+    margin-left: 15px;
+    justify-content: space-between;
+  }
+
+  .footer .footer-right p {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 320px) {
+  .main {
+    height: 80vh;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    color: var(--light-color);
+  }
+
+  .footer .footer-right {
+    margin-left: 4px;
+    margin-top: 7px;
+    width: 40%;
+  }
+}
